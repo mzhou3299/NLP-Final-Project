@@ -1,0 +1,88 @@
+{
+  "test_results": {
+    "Baseline (Keyword)": {
+      "accuracy": 0.7647058823529411,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "f1": 0.7142857142857143,
+      "tp": 5,
+      "tn": 8,
+      "fp": 4,
+      "fn": 0
+    },
+    "Logistic Regression": {
+      "accuracy": 0.7058823529411765,
+      "precision": 0.5,
+      "recall": 0.6,
+      "f1": 0.5454545454545454,
+      "tp": 3,
+      "tn": 9,
+      "fp": 3,
+      "fn": 2
+    },
+    "Linear SVM": {
+      "accuracy": 0.7647058823529411,
+      "precision": 0.5714285714285714,
+      "recall": 0.8,
+      "f1": 0.6666666666666666,
+      "tp": 4,
+      "tn": 9,
+      "fp": 3,
+      "fn": 1
+    },
+    "DistilBERT": {
+      "accuracy": 0.7647058823529411,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "tp": 2,
+      "tn": 11,
+      "fp": 1,
+      "fn": 3
+    }
+  },
+  "dev_results": {
+    "Baseline (Keyword)": {
+      "accuracy": 0.734375,
+      "precision": 0.5454545454545454,
+      "recall": 0.9,
+      "f1": 0.679245283018868,
+      "tp": 18,
+      "tn": 29,
+      "fp": 15,
+      "fn": 2
+    },
+    "Logistic Regression": {
+      "accuracy": 0.75,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "tp": 8,
+      "tn": 40,
+      "fp": 4,
+      "fn": 12
+    },
+    "Linear SVM": {
+      "accuracy": 0.734375,
+      "precision": 0.5714285714285714,
+      "recall": 0.6,
+      "f1": 0.5853658536585366,
+      "tp": 12,
+      "tn": 35,
+      "fp": 9,
+      "fn": 8
+    },
+    "DistilBERT": {
+      "accuracy": 0.625,
+      "precision": 0.3333333333333333,
+      "recall": 0.2,
+      "f1": 0.25,
+      "tp": 4,
+      "tn": 36,
+      "fp": 8,
+      "fn": 16
+    }
+  },
+  "best_f1_model": "Baseline (Keyword)",
+  "best_accuracy_model": "Baseline (Keyword)"
+}
