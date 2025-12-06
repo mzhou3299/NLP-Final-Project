@@ -54,6 +54,7 @@ def main():
     baseline_metrics = load_metrics("baseline_metrics.json")
     classical_metrics = load_metrics("classical_ml_metrics.json")
     transformer_metrics = load_metrics("transformer_metrics.json")
+    finbert_metrics = load_metrics("finbert_metrics.json")
 
     # Print individual results
     print("\n" + "=" * 70)
@@ -67,6 +68,7 @@ def main():
         print_model_results("LINEAR SVM", classical_metrics.get('svm'))
 
     print_model_results("DISTILBERT", transformer_metrics)
+    print_model_results("FINBERT (Large Dataset)", finbert_metrics)
 
     # Summary comparison table
     print("\n" + "=" * 70)
@@ -91,6 +93,9 @@ def main():
 
     if transformer_metrics:
         models.append(("DistilBERT", transformer_metrics.get('test')))
+
+    if finbert_metrics:
+        models.append(("FinBERT (Large)", finbert_metrics.get('test')))
 
     for name, m in models:
         if m:
@@ -125,6 +130,9 @@ def main():
     if transformer_metrics and 'dev' in transformer_metrics:
         dev_models.append(("DistilBERT", transformer_metrics['dev']))
 
+    if finbert_metrics and 'val' in finbert_metrics:
+        dev_models.append(("FinBERT (Large)", finbert_metrics['val']))
+
     if dev_models:
         print("\n{:<25} {:>10} {:>10} {:>10} {:>10}".format(
             "Model", "Accuracy", "Precision", "Recall", "F1"
@@ -157,12 +165,16 @@ Key Observations:
 3. TRANSFORMER (DistilBERT):
    - Limited by small training set (64 samples)
    - Prone to overfitting with few examples
-   - Would likely improve with more data or data augmentation
+
+4. FINBERT (Large Dataset):
+   - Trained on ~40,000 FNSPID sentences
+   - Domain-specific pre-training on financial text
+   - Better generalization with larger training set
 
 Recommendations:
-- For production: Use SVM or ensemble of baseline + ML
-- For better transformer results: Collect more training data
-- Consider domain-specific pre-training (FinBERT) with more data
+- For production: Use FinBERT or ensemble approach
+- FinBERT benefits from financial domain pre-training
+- Larger training set significantly improves performance
 """)
 
     # Save comparison report

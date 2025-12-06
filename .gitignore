@@ -208,6 +208,7 @@ __marimo__/
 
 # Model files (too large for git)
 models/distilbert/
+models/finbert/
 *.bin
 *.safetensors
 
