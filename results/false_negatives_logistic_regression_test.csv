@@ -1,0 +1,3 @@
+id,sentence,url,gold_label,prediction,probability
+S537,"On the company's earnings call he said Best Buy is seeing ""positive growth"" in the fourth quarter and a roughly similar trend to the third quarter but faces tougher year over year comparisons and may see waning trends in some categories like gaming and wearables.",https://www.cnbc.com/2025/11/25/-best-buy-bby-q3-2026-earnings-.html,1,0,0.49843345374147047
+S250,Hassett is seen by investors as someone more likely to push the central bank toward a lower-rate regime favored by President Donald Trump.,https://www.cnbc.com/2025/11/24/stock-market-today-live-updates.html,1,0,0.49975524653704406
